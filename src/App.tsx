@@ -732,7 +732,7 @@ export default function App() {
               </section>
 
               {/* STATUTORY LICENSING & REGULATORY COMPLIANCE */}
-              <section className="py-16 bg-white dark:bg-slate-950">
+              <section className="py-16 bg-slate-50 dark:bg-slate-900 border-t border-b border-gray-150/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
                     <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-orange bg-orange-500/10 px-3 py-1 rounded-full inline-block">
