@@ -135,9 +135,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12" id="contact-panel-wrapper">
-      {/* LEFT COLUMN: Premium Active Inquiry Forms (7 cols) */}
-      <div className="lg:col-span-7 bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 dark:border-slate-700/60">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-14" id="contact-panel-wrapper">
+      {/* LEFT COLUMN: Premium Active Inquiry Forms */}
+      <div className="lg:col-span-7 xl:col-span-8 bg-white dark:bg-slate-800 rounded-3xl p-7 sm:p-10 lg:p-12 shadow-xl border border-gray-100 dark:border-slate-700/60">
         
         {/* Tab Header Selector */}
         <div className="flex border-b border-gray-100 dark:border-slate-700 pb-4 mb-8">
@@ -225,7 +225,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 <input
                   type="tel"
                   required
-                  placeholder="e.g. +91 98765 43210"
+                  placeholder="e.g. +91 74149 38354"
                   value={quotePhone}
                   onChange={(e) => setQuotePhone(e.target.value)}
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 focus:border-brand-orange focus:bg-white dark:focus:bg-slate-950 rounded-xl text-sm transition-colors focus:outline-none dark:text-white"
@@ -372,7 +372,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               <input
                 type="tel"
                 required
-                placeholder="e.g. +91 98765 43210"
+                placeholder="e.g. +91 74149 38354"
                 value={consultPhone}
                 onChange={(e) => setConsultPhone(e.target.value)}
                 className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 focus:border-brand-orange focus:bg-white dark:focus:bg-slate-950 rounded-xl text-sm transition-colors focus:outline-none dark:text-white"
@@ -452,9 +452,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         )}
       </div>
 
-      {/* RIGHT COLUMN: Contact Details & Google Map (5 cols) */}
-      <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
-        <div className="bg-brand-navy text-white rounded-3xl p-8 shadow-xl space-y-6 flex-grow">
+      {/* RIGHT COLUMN: Contact Details & Google Map */}
+      <div className="lg:col-span-5 xl:col-span-4 space-y-8 flex flex-col justify-between">
+        <div className="bg-brand-navy text-white rounded-3xl p-6 sm:p-7 lg:p-8 xl:p-9 shadow-xl space-y-5 lg:space-y-6 flex-grow">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-brand-orange">
               Corporate Office
@@ -474,8 +474,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               </div>
               <div>
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Contact Desk</p>
-                <p className="font-bold text-white mt-0.5">+91 98765 43210</p>
-                <p className="text-xs text-gray-300">+91 98765 43211</p>
+                <p className="font-bold text-white mt-0.5">+91 74149 38354</p>
+                <p className="text-xs text-gray-300">+91 72198 55366</p>
               </div>
             </div>
 
@@ -483,9 +483,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               <div className="bg-white/10 p-3 rounded-2xl shrink-0">
                 <Mail className="w-5 h-5 text-brand-orange" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Direct Email</p>
-                <p className="font-bold text-white mt-0.5 text-xs sm:text-sm">ankletconstruction@gmail.com</p>
+                <p className="font-bold text-white mt-0.5 text-xs sm:text-sm break-words leading-relaxed">ankletconstruction@gmail.com</p>
               </div>
             </div>
 
@@ -493,12 +493,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               <div className="bg-white/10 p-3 rounded-2xl shrink-0">
                 <MapPin className="w-5 h-5 text-brand-orange" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Registered Office</p>
-                <p className="font-bold text-white text-xs leading-normal mt-0.5">
+                <p className="font-bold text-white text-xs leading-relaxed mt-0.5 break-words">
                   Near Gajanan Maharaj Temple, At/Post Bharsingi, Taluka Narkhed, District Nagpur, Maharashtra – 441301, India
                 </p>
-                <p className="text-[9px] text-brand-orange font-black tracking-widest uppercase mt-1">
+                <p className="text-[9px] text-brand-orange font-black tracking-widest uppercase mt-1 break-words">
                   CIN: U43900MH2025PTC444223
                 </p>
               </div>

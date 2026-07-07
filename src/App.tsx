@@ -1,4 +1,7 @@
 import React from "react";
+import suryaHeritageVilla from "../assets/Surya Heritage Villa.jpeg";
+import viraajCorporatePlaza from "../assets/Viraaj Corporate Plaza.jpeg";
+import saarthExpresswayCorridor from "../assets/Saarth Expressway Corridor.jpeg";
 import { Navbar } from "./components/Navbar";
 import { ServicesGrid } from "./components/ServicesGrid";
 import { BOQEstimator } from "./components/BOQEstimator";
@@ -29,7 +32,10 @@ import {
   FileSpreadsheet,
   BadgeIndianRupee,
   PhoneCall,
-  MessageSquare
+  MessageSquare,
+  Workflow,
+  Handshake,
+  Building2
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -58,6 +64,9 @@ const WhyUsIcon = ({ name, className }: { name: string; className: string }) => 
 export default function App() {
   const [activeView, setActiveView] = React.useState<string>("home");
   const [contactTab, setContactTab] = React.useState<"quote" | "consult">("quote");
+  const primaryPhoneNumber = "+917414938354";
+  const primaryWhatsappNumber = "917414938354";
+  const secondaryPhoneNumber = "+917219855366";
 
   // Reusable Page Header for subpages with clean, elegant layout
   const SubpageHeader = ({ 
@@ -414,24 +423,24 @@ export default function App() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {[
                       {
-                        title: "The Obsidian Villa",
+                        title: "Surya Heritage Villa",
                         cat: "Residential",
                         desc: "An award-winning architectural masterpiece utilizing cantilevered raw concrete and double-glazed smart glass panels.",
-                        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=400",
+                        image: suryaHeritageVilla,
                         loc: "Alibaug, Maharashtra"
                       },
                       {
-                        title: "Aether Corporate Plaza",
+                        title: "Viraaj Corporate Plaza",
                         cat: "Commercial",
                         desc: "A premium 12-story high-end corporate headquarters featuring a distinctive smart ventilated glass facade.",
-                        image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=400",
+                        image: viraajCorporatePlaza,
                         loc: "BKC, Mumbai"
                       },
                       {
-                        title: "Western Gateway Expressway",
+                        title: "Saarth Expressway Corridor",
                         cat: "Infrastructure",
                         desc: "A critical 14km high-speed arterial concrete highway development featuring two multi-span highway bridges.",
-                        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=400",
+                        image: saarthExpresswayCorridor,
                         loc: "Pune-Bengaluru Corridor"
                       }
                     ].map((proj, i) => (
@@ -608,7 +617,119 @@ export default function App() {
                 </div>
               </section>
 
-              
+              {/* ADDITIONAL INFORMATION SECTION */}
+              <section className="py-16 bg-slate-50 dark:bg-slate-900 border-t border-b border-gray-150/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-orange bg-orange-500/10 px-3 py-1 rounded-full inline-block">
+                      Company Insight
+                    </span>
+                    <h2 className="text-xl sm:text-2xl font-black font-display text-brand-navy dark:text-white tracking-tight">
+                      What Makes ANKLET Different
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
+                      Beyond construction, we bring disciplined project intelligence, client clarity, and dependable execution to every engagement.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[
+                      {
+                        title: "End-to-End Delivery",
+                        desc: "From design coordination and quantity estimation to site execution and final handover, every milestone is managed with precise accountability, transparent documentation, and milestone-based client reporting.",
+                        icon: Workflow,
+                        detail: "Single-point accountability from concept to handover"
+                      },
+                      {
+                        title: "Client-Centric Planning",
+                        desc: "We provide transparent timelines, cost visibility, and direct communication so clients always know where the project stands and what decisions are needed next.",
+                        icon: Handshake,
+                        detail: "Clear communication and proactive project governance"
+                      },
+                      {
+                        title: "Future-Ready Infrastructure",
+                        desc: "Our projects are designed with resilience, energy efficiency, and long-term performance in mind, blending durable materials with smart construction practices.",
+                        icon: Building2,
+                        detail: "Built for durability, efficiency, and lasting value"
+                      }
+                    ].map((item, idx) => {
+                      const Icon = item.icon;
+                      return (
+                        <div key={idx} className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700/50 p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                          <div className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-orange-500/10 text-brand-orange mb-4">
+                            <Icon className="w-5 h-5" />
+                          </div>
+                          <h3 className="text-sm font-black text-brand-navy dark:text-white tracking-wide mb-2">{item.title}</h3>
+                          <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
+                          <div className="mt-3 text-[10px] font-black uppercase tracking-[0.2em] text-brand-orange">
+                            {item.detail}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </section>
+
+              {/* CORE LEADERSHIP SECTION */}
+              <section className="py-16 bg-white dark:bg-slate-950 border-b border-gray-150/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-orange bg-orange-500/10 px-3 py-1 rounded-full inline-block">
+                      Core Board & Management
+                    </span>
+                    <h2 className="text-xl sm:text-2xl font-black font-display text-brand-navy dark:text-white tracking-tight">
+                      Senior Executive Leadership
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
+                      Our directors and chief engineering leads hold decades of collective industry credentials in heavy infrastructure and high-rise developments.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[
+                      {
+                        name: "Er. Rajan Malhotra",
+                        role: "Chairman & Managing Director",
+                        desc: "With 30+ years of pioneering experience in heavy earthworks, mass-concrete masonry, and national transport layouts. Vets all core structural frameworks.",
+                        exp: "30+ Yrs Exp",
+                        img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400"
+                      },
+                      {
+                        name: "Ar. Shreya Joshi",
+                        role: "Executive Director of Architectural Systems",
+                        desc: "Directs ANKLET's luxurious architectural drafting, double-glazed facade design, and sustainable carbon-neutral spatial zoning standards.",
+                        exp: "B.Arch Principal",
+                        img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400"
+                      },
+                      {
+                        name: "Er. Amit Deshmukh",
+                        role: "Chief Structural Consultant",
+                        desc: "Certified Grade-I structural auditor. Oversees Building Information Modeling (BIM) collision logs, load-bearing stress evaluations, and seismic zoning checks.",
+                        exp: "M.Tech IIT Bombay",
+                        img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400"
+                      }
+                    ].map((leader, i) => (
+                      <div key={i} className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-slate-700/50 flex flex-col hover:shadow-md transition-all duration-300">
+                        <div className="h-56 overflow-hidden relative">
+                          <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                          <span className="absolute bottom-3 right-3 bg-brand-orange text-white text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
+                            {leader.exp}
+                          </span>
+                        </div>
+                        <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                          <div>
+                            <h3 className="text-sm font-black text-brand-navy dark:text-white tracking-wide">{leader.name}</h3>
+                            <p className="text-[11px] font-bold text-brand-orange uppercase tracking-wider mt-0.5">{leader.role}</p>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 leading-relaxed font-light">{leader.desc}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
 
               {/* STATUTORY LICENSING & REGULATORY COMPLIANCE */}
               <section className="py-16 bg-slate-50 dark:bg-slate-900 border-t border-b border-gray-150/10">
@@ -685,12 +806,16 @@ export default function App() {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
                     {[
-                      { name: "TATA Tiscon", type: "FE 550D Super Ductile Steel Reinforcements" },
-                      { name: "UltraTech Premium", type: "Grade 53 Portland Pozzolana Cement (PPC)" },
-                      { name: "Berger Protective", type: "Industrial Damp-Proof Coatings & Emulsions" },
-                      { name: "Saint-Gobain", type: "Double-Glazed Smart Acoustic Low-E Glasses" }
+                      { name: "TATA Tiscon", type: "FE 550D super ductile steel reinforcement" },
+                      { name: "UltraTech Cement", type: "Premium grade cement for structural durability" },
+                      { name: "Asian Paints", type: "Protective coatings and architectural finishes" },
+                      { name: "Saint-Gobain", type: "High-performance glass and facade systems" },
+                      { name: "JKLaxmi", type: "Ready-mix concrete and concrete admixtures" },
+                      { name: "HILTI", type: "Anchoring systems and precision fastening tools" },
+                      { name: "Schindler", type: "Vertical transportation systems for commercial towers" },
+                      { name: "Bosch", type: "Site power tools and construction equipment support" }
                     ].map((brand, i) => (
                       <div key={i} className="p-4 bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700/50 flex flex-col justify-center">
                         <span className="text-xs font-black text-brand-navy dark:text-white block">{brand.name}</span>
@@ -839,7 +964,13 @@ export default function App() {
                   </p>
                 </div>
 
-                <ProjectsPortfolio />
+                <ProjectsPortfolio
+                  onConsultNow={() => {
+                    setContactTab("quote");
+                    setActiveView("contact");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                />
               </section>
 
               {/* TECHNOLOGY INTEGRATION ON SITE */}
@@ -1224,20 +1355,20 @@ export default function App() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {[
                       {
-                        title: "The Obsidian Cantilever Villa",
+                        title: "Surya Heritage Cantilever Villa",
                         loc: "Coastal Alibaug, Maharashtra",
                         challenge: "Highly corrosive maritime sea breeze, loose silty mud soil requiring extensive piling.",
                         solution: "Implemented 12-meter deep underground friction concrete piles. Sourced specialized moisture-resistant concrete with corrosion-inhibiting steel coatings.",
                         metric: "Completed 22 Days Ahead of Schedule",
-                        bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600"
+                        bg: suryaHeritageVilla
                       },
                       {
-                        title: "Aether Corporate HQ High-Rise",
+                        title: "Viraaj Corporate HQ High-Rise",
                         loc: "BKC Commercial Area, Mumbai",
                         challenge: "Severe logistical constraints on concrete mixers, highly crowded transit zones.",
                         solution: "Managed just-in-time delivery scheduling using our automated Gantt models. Conducted pre-stressed column slab casting at night to bypass transit congestion.",
                         metric: "Zero Safety Incidents Over 240,000 Hours",
-                        bg: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600"
+                        bg: viraajCorporatePlaza
                       }
                     ].map((caseStudy, idx) => (
                       <div key={idx} className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-150 dark:border-slate-700/50 shadow-sm overflow-hidden flex flex-col justify-between">
@@ -1360,7 +1491,7 @@ export default function App() {
                         <span className="font-bold text-brand-navy dark:text-white">ankletconstruction@gmail.com</span>
                       </p>
                       <p className="text-[11px] text-gray-500 dark:text-gray-400 font-light">
-                        Direct Lines: +91 98765 43210 / +91 98765 43211
+                        Direct Lines: +91 74149 38354 / +91 72198 55366
                       </p>
                     </div>
 
@@ -1438,7 +1569,7 @@ export default function App() {
                 <strong>Registered Office:</strong><br />
                 Near Gajanan Maharaj Temple, At/Post Bharsingi, Taluka Narkhed, District Nagpur, Maharashtra – 441301, India
               </p>
-              <p>Contact: +91 98765 43210 / +91 98765 43211</p>
+              <p>Contact: +91 74149 38354 / +91 72198 55366</p>
               <p>Email: ankletconstruction@gmail.com</p>
               <p className="text-[9px] text-brand-orange font-black uppercase tracking-wider">
                 CIN: U43900MH2025PTC444223
@@ -1462,7 +1593,7 @@ export default function App() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3.5 items-end" id="luxury-floating-actions">
         {/* WhatsApp Chat Button */}
         <motion.a
-          href="https://wa.me/919876543210"
+          href={`https://wa.me/${primaryWhatsappNumber}`}
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
@@ -1481,7 +1612,7 @@ export default function App() {
 
         {/* Call Us Button */}
         <motion.a
-          href="tel:+919876543210"
+          href={`tel:${primaryPhoneNumber}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}

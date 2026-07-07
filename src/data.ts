@@ -1,4 +1,10 @@
 import { Service, Project, ProcessStep, Testimonial, WhyChooseUsItem } from "./types";
+import suryaHeritageVilla from "../assets/Surya Heritage Villa.jpeg";
+import viraajCorporatePlaza from "../assets/Viraaj Corporate Plaza.jpeg";
+import saarthExpresswayCorridor from "../assets/Saarth Expressway Corridor.jpeg";
+import shriyanCulturalPavilion from "../assets/Shriyan Cultural Pavilion.jpeg";
+import aaravExecutiveSuites from "../assets/Aarav Executive Suites.jpeg";
+import nilayaCanopyResidences from "../assets/Nilaya Canopy Residences.jpeg";
 
 export const SERVICES_DATA: Service[] = [
   {
@@ -41,6 +47,20 @@ export const SERVICES_DATA: Service[] = [
       "Public-private partnerships (PPP) and government civil contracts"
     ],
     imageUrl: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=800",
+    iconName: "HardHat"
+  },
+  {
+    id: "government-construction",
+    title: "Government Construction",
+    subtitle: "Public Works, Institutional Buildings & Civic Infrastructure",
+    description: "Delivering compliant and durable public-sector projects with disciplined execution, transparent coordination, and a strong focus on long-term civic value. We support government and institutional developments from planning through handover.",
+    detailedPoints: [
+      "Public buildings and institutional facility construction",
+      "Municipal and civic infrastructure development",
+      "Strict regulatory compliance and project documentation",
+      "Reliable delivery for government and public-sector contracts"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
     iconName: "HardHat"
   },
   {
@@ -104,69 +124,69 @@ export const SERVICES_DATA: Service[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: "proj-1",
-    title: "The Obsidian Villa",
+    title: "Surya Heritage Villa",
     category: "Residential",
     description: "An award-winning architectural masterpiece utilizing cantilevered raw concrete, massive high-performance double-glazed glass panels, and seamless indoor-outdoor living channels with a natural stone water court.",
-    imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000",
+    imageUrl: suryaHeritageVilla,
     location: "Alibaug, Maharashtra",
     year: "2025",
     size: "12,500 Sq. Ft.",
-    client: "Dr. Aditya Singhania"
+    client: "Dr. Aditya Singhania, Chairman, Singhania Estates"
   },
   {
     id: "proj-2",
-    title: "Aether Corporate Plaza",
+    title: "Viraaj Corporate Plaza",
     category: "Commercial",
     description: "A premium 12-story high-end corporate headquarters featuring a distinctive double-skin smart ventilated glass facade, high-efficiency geothermal HVAC systems, and flexible column-free modular office wings.",
-    imageUrl: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1000",
+    imageUrl: viraajCorporatePlaza,
     location: "BKC, Mumbai",
     year: "2024",
     size: "280,000 Sq. Ft.",
-    client: "Aether Capital Corp"
+    client: "Aether Capital Partners, Mumbai"
   },
   {
     id: "proj-3",
-    title: "Western Gateway Expressway",
+    title: "Saarth Expressway Corridor",
     category: "Infrastructure",
     description: "A critical 14km high-speed arterial concrete highway development featuring two multi-span prestressed concrete bridges, automated traffic surveillance integrations, and extensive soil-reinforcement civil works.",
-    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000",
+    imageUrl: saarthExpresswayCorridor,
     location: "Pune-Bengaluru Corridor",
     year: "2025",
     size: "14 Kilometers",
-    client: "National Highways & Infrastructure Corp"
+    client: "Ministry of Road Transport & Highways, Government of India"
   },
   {
     id: "proj-4",
-    title: "The Helix Cultural Pavilion",
+    title: "Shriyan Cultural Pavilion",
     category: "Architecture",
     description: "A striking public structure featuring parametric curves, custom-cast self-compacting architectural white concrete, and a monumental spiraling central core connecting multi-level art galleries.",
-    imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000",
+    imageUrl: shriyanCulturalPavilion,
     location: "New Delhi, NCR",
     year: "2023",
     size: "45,000 Sq. Ft.",
-    client: "Delhi Heritage Commission"
+    client: "Delhi Heritage Commission, Government of NCT Delhi"
   },
   {
     id: "proj-5",
-    title: "Vanguard Executive Suites",
+    title: "Aarav Executive Suites",
     category: "Interiors",
     description: "A high-end luxury office suite featuring solid Calacatta marble slab partitionings, custom acoustic curved walnut millwork, automated smart ambient scene lighting, and premium Italian luxury furnishings.",
-    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000",
+    imageUrl: aaravExecutiveSuites,
     location: "GIFT City, Gujarat",
     year: "2025",
     size: "18,500 Sq. Ft.",
-    client: "Vanguard Trust Advisory"
+    client: "Vanguard Trust Advisory, GIFT City"
   },
   {
     id: "proj-6",
-    title: "The Canopy Residences",
+    title: "Nilaya Canopy Residences",
     category: "Residential",
     description: "A private cluster of 6 hyper-luxury timber-and-glass forest villas harmonized with direct views of the natural landscape, featuring private infinity salt-water plunge pools and rainwater harvesting infrastructures.",
-    imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000",
+    imageUrl: nilayaCanopyResidences,
     location: "Khandala, Maharashtra",
     year: "2024",
     size: "54,000 Sq. Ft. (Total)",
-    client: "Anklet Developers Group"
+    client: "Anklet Developers Group, Pune"
   }
 ];
 

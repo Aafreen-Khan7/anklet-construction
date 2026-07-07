@@ -193,34 +193,6 @@ export const MeetingScheduler: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Consultant Card */}
-            <div className="lg:col-span-5 bg-slate-50 dark:bg-slate-900/60 p-5 rounded-2xl border border-gray-100 dark:border-slate-800 flex flex-col items-center justify-center text-center space-y-4">
-              <span className="text-[9px] font-black uppercase tracking-[0.2em] text-brand-orange block">
-                Assigned Consulting Expert
-              </span>
-              
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange to-brand-navy rounded-full blur opacity-15" />
-                <img
-                  src={matchedConsultant.pic}
-                  alt={matchedConsultant.name}
-                  referrerPolicy="no-referrer"
-                  className="w-16 h-16 rounded-full object-cover border-2 border-brand-orange relative z-10"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <h4 className="text-xs font-black text-brand-navy dark:text-white">{matchedConsultant.name}</h4>
-                <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-tight font-medium">{matchedConsultant.role}</p>
-                <span className="text-[9px] text-brand-orange font-bold bg-orange-500/10 px-2 py-0.5 rounded inline-block mt-1">
-                  {matchedConsultant.exp}
-                </span>
-              </div>
-
-              <p className="text-[10px] text-gray-400 max-w-xs leading-relaxed font-light">
-                *The consultant will call you directly at the selected hour to audit your CAD blueprints, check compliance zoning parameters, or inspect the PWD pricing schedules.
-              </p>
-            </div>
 
           </form>
         ) : (

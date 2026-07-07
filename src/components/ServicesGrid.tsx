@@ -50,6 +50,8 @@ export const ServicesGrid: React.FC = () => {
         return ["Office Buildings", "Shopping Complexes", "Business Hubs", "Retail Spaces"];
       case "infrastructure":
         return ["Roads & Highways", "Site Development", "Industrial Parks", "Government Civil Works"];
+      case "government-construction":
+        return ["Public Buildings", "Civic Infrastructure", "Regulatory Compliance", "Institutional Projects"];
       case "architecture":
         return ["2D & 3D Design Drafting", "Engineering Blueprints", "Structural Load Planning", "Municipal Authority Approval Drawings"];
       case "interior":

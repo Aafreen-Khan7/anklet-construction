@@ -15,7 +15,11 @@ import { motion, AnimatePresence } from "motion/react";
 
 type CategoryFilter = "All" | "Residential" | "Commercial" | "Infrastructure" | "Architecture" | "Interiors";
 
-export const ProjectsPortfolio: React.FC = () => {
+type ProjectsPortfolioProps = {
+  onConsultNow?: () => void;
+};
+
+export const ProjectsPortfolio: React.FC<ProjectsPortfolioProps> = ({ onConsultNow }) => {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -245,11 +249,22 @@ export const ProjectsPortfolio: React.FC = () => {
                   <button
                     onClick={() => {
                       setSelectedProject(null);
+                      if (onConsultNow) {
+                        onConsultNow();
+                        window.setTimeout(() => {
+                          const selectEl = document.getElementById("quote-project-type") as HTMLSelectElement | null;
+                          if (selectEl && selectedProject) {
+                            selectEl.value = selectedProject.category;
+                          }
+                        }, 150);
+                        return;
+                      }
+
                       const element = document.getElementById("contact");
                       if (element) {
                         element.scrollIntoView({ behavior: "smooth" });
-                        const selectEl = document.getElementById("quote-project-type") as HTMLSelectElement;
-                        if (selectEl) {
+                        const selectEl = document.getElementById("quote-project-type") as HTMLSelectElement | null;
+                        if (selectEl && selectedProject) {
                           selectEl.value = selectedProject.category;
                         }
                       }
